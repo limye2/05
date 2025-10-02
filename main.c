@@ -8,19 +8,28 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    int number;
-    int sum=0;
-    int i;
+    int a;
+    int b;
+    char op; //int로 받아도 가능
+    int result=0;
     
-    printf("input a number : ");
-    scanf("%d", &number);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &a, &op, &b);
         
-    for(i=0; i<=number; i++)
+    if(op=='+')
     {
-        sum=sum+i;
+        result = a+b;
+    }
+    else if(op=='-')
+    {
+        result = a-b;
+    }
+    else
+    {
+        printf("지원하지 않는 연산자 입니다.");
     }
     
-    printf("The result is %d\n", sum);
+    printf("=%d\n", result);
     
     return 0;
 }
