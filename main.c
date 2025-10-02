@@ -9,15 +9,18 @@
 
 int main(int argc, const char * argv[]) {
     int number;
-    printf("정수 하나를 입력하시오 :");
-    scanf("%d", &number);
+    int sum=0;
+    int i;
     
-    if(number<0)
+    printf("input a number : ");
+    scanf("%d", &number);
+        
+    for(i=0; i<=number; i++)
     {
-        number = -number;
+        sum=sum+i;
     }
     
-    printf("절대값은 %d 입니다.\n", number);
+    printf("The result is %d\n", sum);
     
     return 0;
 }
