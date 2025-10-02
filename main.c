@@ -11,22 +11,23 @@ int main(int argc, const char * argv[]) {
     int a;
     int b;
     char op; //int로 받아도 가능
-    int result=0;
+    int result;
     
-    printf("enter the calculation : ");
+    printf("enter the calculation :");
     scanf("%d %c %d", &a, &op, &b);
-        
-    if(op=='+')
+    
+    switch(op)
     {
-        result = a+b;
-    }
-    else if(op=='-')
-    {
-        result = a-b;
-    }
-    else
-    {
-        printf("지원하지 않는 연산자 입니다.");
+        case '+':
+            result = a+b;
+            break;
+            
+        case '-':
+            result = a-b;
+            break;
+            
+        default:
+            printf("지원하지 않는 연산자입니다.\n");
     }
     
     printf("=%d\n", result);
